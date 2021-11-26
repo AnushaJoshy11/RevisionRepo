@@ -39,33 +39,33 @@ provider "aws" {
     name = "myterraformgitsns123"
   }
 
-  module "s3_bucket" {
-    source = "terraform-aws-modules/s3-bucket/aws"
+#   module "s3_bucket" {
+#     source = "terraform-aws-modules/s3-bucket/aws"
 
-    bucket = "my-s3-bucket"
-    acl    = "private"
-    versioning = {
-      enabled = true
-    }
-    server_side_encryption_configuration = var.server_side_encryption_configuration
-  }
+#     bucket = "my-s3-bucket"
+#     acl    = "private"
+#     versioning = {
+#       enabled = true
+#     }
+#     server_side_encryption_configuration = var.server_side_encryption_configuration
+#   }
 
 
 
-resource "aws_kms_key" "mykey" {
-  description             = "This key is used to encrypt bucket objects"
-  deletion_window_in_days = 10
-}
+# resource "aws_kms_key" "mykey" {
+#   description             = "This key is used to encrypt bucket objects"
+#   deletion_window_in_days = 10
+# }
 
-resource "aws_s3_bucket" "mybucket" {
-  bucket = "mybucket"
+# resource "aws_s3_bucket" "mybucket" {
+#   bucket = "mybucket"
 
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        kms_master_key_id = aws_kms_key.mykey.arn
-        sse_algorithm     = "aws:kms"
-      }
-    }
-  }
-}
+#   server_side_encryption_configuration {
+#     rule {
+#       apply_server_side_encryption_by_default {
+#         kms_master_key_id = aws_kms_key.mykey.arn
+#         sse_algorithm     = "aws:kms"
+#       }
+#     }
+#   }
+# }
