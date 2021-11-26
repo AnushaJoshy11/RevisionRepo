@@ -30,7 +30,7 @@ provider "aws" {
     source  = "terraform-aws-modules/sns/aws"
     version = "~> 3.0"
 
-    name = "myterraformsns-topic"
+    name = "myterraformgitsns-topic"
   }
 
   module "s3_bucket" {
