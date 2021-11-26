@@ -28,3 +28,9 @@ variable "availability_zone" {
   type        = string
   default     = null
 }
+
+variable "server_side_encryption_configuration" {
+  description = "Map containing server-side encryption configuration."
+  type        = any
+  default     = {}
+}
