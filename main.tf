@@ -27,8 +27,9 @@ provider "aws" {
   default_tags {
   tags = {
     Environment = "Test"
-    Name        = "Provider Tag"
+    Name        = "Provider Tags"
     versiontag  = "0.3.0"
+    Additinaltag = "test"
   }
 }
 }
