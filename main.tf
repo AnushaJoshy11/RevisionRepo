@@ -29,7 +29,7 @@ provider "aws" {
     Environment = "Test"
     Name        = "Provider Tags"
     versiontag  = "0.3.0"
-    Additinaltag = "test"
+    Additinaltag = "test123"
   }
 }
 }
