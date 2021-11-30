@@ -30,7 +30,7 @@ provider "aws" {
     Name        = "Provider Tags"
     versiontag  = "0.3.0"
     Additinaltag = "test123"
-    gitactions = "123test"
+    gitactions = "123test12"
   }
 }
 }
