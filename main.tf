@@ -28,7 +28,7 @@ provider "aws" {
   tags = {
     Environment = "Test"
     Name        = "Provider Tag"
-    versiontag  = "1.0.0"
+    versiontag  = "0.3.0"
   }
 }
 }
